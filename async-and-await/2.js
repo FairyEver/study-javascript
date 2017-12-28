@@ -6,7 +6,7 @@ async function demo () {
     const url = baseUrl + '/base'
     const res = await fetch(url)
     const resData = await res.json()
-    return await resData.data.name
+    return resData.data.name
 }
 
 demo()
