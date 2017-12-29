@@ -2,19 +2,19 @@
 // 等到初始化结束，这个作用域就会消失
 // 这种语法行为，在不设置参数默认值时，是不会出现的
 
-
+// 没有这个a会报错
 const a = 10
 
-function demo(a, n = a + 10) {
-    // 给n赋值的时候使用的a是参数a 并不是外部的a
+function demo(n = a + 10) {
+    // 给n赋值的时候使用的外部的a
     console.log(a)
     console.log(n)
 }
 
 demo()
-// undefined
-// NaN
+// 10
+// 20
 
 demo(30)
+// 10
 // 30
-// 40

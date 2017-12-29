@@ -2,19 +2,23 @@
 // 等到初始化结束，这个作用域就会消失
 // 这种语法行为，在不设置参数默认值时，是不会出现的
 
+const a = 'outer a'
 
-const a = 10
-
-function demo(a, n = a + 10) {
-    // 给n赋值的时候使用的a是参数a 并不是外部的a
-    console.log(a)
-    console.log(n)
+function demo(name = () => a) {
+    console.log(name())
 }
 
 demo()
-// undefined
-// NaN
+// outer a
 
-demo(30)
-// 30
-// 40
+const a2 = 'outer a2'
+
+function demo2(name2 = () => {
+    let a2 = 'inner a'
+    return a2
+}) {
+    console.log(name2())
+}
+
+demo2()
+// inner a
