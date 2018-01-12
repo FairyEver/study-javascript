@@ -26,3 +26,7 @@ function demo3(a, b, c = 1, d, e) {
 }
 
 console.log(demo3.length) // 2
+
+const a = 123
+
+console.log(a)
