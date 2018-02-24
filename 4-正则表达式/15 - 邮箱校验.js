@@ -1,9 +1,15 @@
-// 个数
-// {n} 正好出现n次
-// {n, m} 最少n 最多m次
-// {n,} 最少 n 次 最多不限制
+const mailAddress = '--1711467488@qq.com2'
 
-// + 等价于 {1,} 最少一次 最多不限
-// ? 等价于 {0, 1} 可以有 可以没有
+const r = /\w+@[a-z0-9]+\.[a-z]+/i
 
-// * 等价于 {0,} 可以没有 也可以有 有多少个也没事
+console.log(r.test(mailAddress)) // true
+
+// test 特性 只要字符串一部分符合要求 就会返回true
+
+// ^ 不出现在 [] 中 表示行首
+
+// $ 表示尾
+
+const r2 = /^\w+@[a-z0-9]+\.[a-z]+$/i
+
+console.log(r2.test(mailAddress)) // false
