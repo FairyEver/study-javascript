@@ -1,0 +1,17 @@
+console.log('start')
+
+let pro = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Hello')
+    }, 1000);
+})
+
+setTimeout(() => {
+    pro
+        .then(value => {
+            console.log(value)
+        })
+}, 3000)
+
+// start
+// Hello
