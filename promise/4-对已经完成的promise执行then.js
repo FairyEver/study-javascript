@@ -15,3 +15,5 @@ setTimeout(() => {
 
 // start
 // Hello
+
+// 在任何地方生成一个promise后，可以将这个promise在其它地方再使用，实现队列
