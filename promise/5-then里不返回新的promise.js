@@ -7,6 +7,7 @@ new Promise((resolve, reject) => {
 })
     .then(value => {
         console.log('step1', value);
+        // 注意这里没有返回
         (() => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -15,6 +16,7 @@ new Promise((resolve, reject) => {
                 }, 3000);
             })
         })()
+        // 这是真正返回的
         return 'World'
     })
     .then(value => {
