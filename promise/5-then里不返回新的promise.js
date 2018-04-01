@@ -21,10 +21,21 @@ new Promise((resolve, reject) => {
     })
     .then(value => {
         console.log(value)
+        // 返回false也不会阻止下一个then
+        return false
+    })
+    .then(value => {
+        console.log(value)
+        // 没有返回东西
+    })
+    .then(value => {
+        console.log(value)
     })
 
 
 // start
 // step1 Hello
 // World
+// false
+// undefined
 // inner promise log
