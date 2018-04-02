@@ -15,8 +15,8 @@ const pro3 = new Promise((resolve, reject) => {
 })
 
 Promise.race([pro1, pro2, pro3])
-  .then(arr => {
-    console.log(arr)
+  .then(data => {
+    console.log(data)
   })
 
 // 1
