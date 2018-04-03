@@ -1,4 +1,6 @@
 var callbacks = []
+// let有块作用域
+
 for (let i = 0; i < 5; i++) {
   callbacks[i] = () => {
     console.log(i)
