@@ -9,6 +9,8 @@ for (let index = 0; index < arr.length + 1; index++) {
   const cur = _arr.next()
   if (cur.done !== true) {
     a.push(cur.value)
+  } else {
+    console.log('already done!')
   }
 }
 
@@ -16,6 +18,7 @@ a.forEach(e => {
   console.log(e)
 })
 
+// already done!
 // Array(2) [0, "a"]
 // Array(2) [1, "b"]
 // Array(2) [2, "c"]
