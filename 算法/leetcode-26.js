@@ -8,6 +8,11 @@ var removeDuplicates = function(nums) {
   }, []).length
 }
 
-let arr = [1, 1, 2]
+let arr = [1, 3, 2, 1, 7, 1]
 console.log(removeDuplicates(arr))
 console.log(arr)
+
+
+let arr2 = [1, 1, 1, 1, 2]
+console.log(removeDuplicates(arr2))
+console.log(arr2)
