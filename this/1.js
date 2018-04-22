@@ -17,11 +17,3 @@ obj.sayName() // obj name
 obj.sayName2() // obj name
 
 obj.sayName3() // undefined
-
-
-
-
-
-
-
-
